@@ -1,4 +1,4 @@
-form, .member, .filter {
+/*form, .member, .filter {
   margin: 10px;
   padding: 10px;
   border: 2px solid grey;
@@ -22,4 +22,7 @@ nav>*:first-child{
   height:100%;
   border-radius:5px;
   background-color:lightgrey;
+}*/
+.form-group {
+  width:45%;
 }

@@ -14,7 +14,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { AdminComponent } from './admin/admin.component';
 import { NewMemberComponent } from './new-member/new-member.component';
 import { RemoveDupesPipe } from './remove-dupes.pipe';
-import { RoleFilterPipe } from './role-filter.pipe';
+import { MemberFilterPipe } from './member-filter.pipe';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -35,7 +35,7 @@ export const firebaseConfig = {
     AdminComponent,
     NewMemberComponent,
     RemoveDupesPipe,
-    RoleFilterPipe
+    MemberFilterPipe
   ],
   imports: [
     BrowserModule,

@@ -1,19 +1,19 @@
 <form>
   <div class="form-group">
     <label>Member's First Name:</label>
-    <input #newFirst>
+    <input class="form-control" #newFirst>
   </div>
   <div class="form-group">
     <label>Member's Last Name:</label>
-    <input #newLast>
+    <input class="form-control" #newLast>
   </div>
   <div class="form-group">
     <label>Member's School of Magical Study:</label>
-    <input #newSchool>
+    <input class="form-control" #newSchool>
   </div>
   <div class="form-group">
     <label>Member's Level in their Magical School:</label>
-    <select #newLevel>
+    <select class="form-control" #newLevel>
       <option value="Novice">Novice</option>
       <option value="Apprentice">Apprentice</option>
       <option value="Journeyman">Journeyman</option>
@@ -22,8 +22,8 @@
     </select>
     <div class="form-group">
       <label>Member's Role in the Guild:</label>
-      <input #newRole>
+      <input class="form-control" #newRole>
     </div>
-    <button (click)="saveMember(newFirst.value, newLast.value, newSchool.value, newLevel.value, newRole.value)">Add</button>
+    <button class="btn btn-md btn-success" (click)="saveMember(newFirst.value, newLast.value, newSchool.value, newLevel.value, newRole.value)">Add</button>
   </div>
 </form>

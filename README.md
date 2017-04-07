@@ -24,6 +24,8 @@ You will need the following things properly installed on your computer.
 * $`ng serve`
 * Navigate to localhost:4200 in a web browser
 
+## Online version
+The deployed version of this app can be viewed [here](https://magicians-guild.firebaseapp.com/).
 
 ## Entity creation plan/workflow
   1. $ `ng g c about`

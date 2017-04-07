@@ -1,14 +1,14 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'roleFilter'
+  name: 'memberFilter'
 })
-export class RoleFilterPipe implements PipeTransform {
+export class MemberFilterPipe implements PipeTransform {
 
-  transform(input: any, role): any {
+  transform(input: any, key, value): any {
     if(!input){return input;}
     return input.filter(function(member){
-      if(member.role === role || role === "all"){
+      if(member[key] === value || value === "all"){
         return true;
       } else {
         return false;
