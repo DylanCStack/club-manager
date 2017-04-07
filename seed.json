@@ -1,0 +1,30 @@
+{
+  "members" : [{
+    "firstName":"Harry" ,
+    "lastName":"Houndini",
+    "school":"trickery" ,
+    "level": "master",
+    "role": "member"
+    },
+    {
+    "firstName":"Subla" ,
+    "lastName":"Rodelbmud",
+    "school":"sorcery" ,
+    "level": "master",
+    "role": "member"
+    },
+    {
+    "firstName":"Ben" ,
+    "lastName":"Franklin",
+    "school":"electromancy" ,
+    "level": "journeyman",
+    "role": "treasurer"
+    },
+    {
+    "firstName":"Ted" ,
+    "lastName":"The Accountant",
+    "school":"self-decipline" ,
+    "level": "master",
+    "role": "President"
+    }]
+}
