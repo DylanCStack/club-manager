@@ -28,7 +28,7 @@ You will need the following things properly installed on your computer.
 ## Entity creation plan/workflow
   1. $ `ng g c about`
   2. $ `ng g c contact`
-  3. $ `touch app.routing`
+  3. $ `touch app.routing.ts`
   4. $ `ng g c roster`
   5. Create firebase project and database
   6. $ `touch seed.json`
