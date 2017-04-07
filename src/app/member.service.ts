@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
+import { Member } from './member.model';
 
 @Injectable()
 export class MemberService {
@@ -14,6 +15,10 @@ export class MemberService {
   }
   getByKey(key){
     return this.angularFire.database.object('members/'+key);
+  }
+  saveNewMember(e){
+    console.log("service level");
+    this.members.push(new Member(e.first, e.last, e.school, e.level, e.role));
   }
 
 }
