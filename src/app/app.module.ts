@@ -10,6 +10,7 @@ import { ContactComponent } from './contact/contact.component';
 import { RosterComponent } from './roster/roster.component';
 import { AngularFireModule } from 'angularfire2';
 import { masterFirebaseConfig } from './api-keys';
+import { ProfileComponent } from './profile/profile.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -25,7 +26,8 @@ export const firebaseConfig = {
     AppComponent,
     AboutComponent,
     ContactComponent,
-    RosterComponent
+    RosterComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

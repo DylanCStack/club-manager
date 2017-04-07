@@ -1,5 +1,5 @@
 <div class="member" *ngFor="let member of members | async">
-  <h3>{{member.lastName}}, {{member.firstName}}</h3>
+  <h3 (click)="goToProfile(member)"><a (click)="$event.preventDefault();" href="#">{{member.lastName}}, {{member.firstName}}</a></h3>
   <h4>{{member.level}} of {{member.school}}</h4>
   <p>Guild Role: {{member.role}}</p>
 </div>
