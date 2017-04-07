@@ -35,8 +35,9 @@ You will need the following things properly installed on your computer.
   7. $ `touch api-keys.ts`
   8. $ `ng g s MemberService`
   9. $ `ng g c profile`
-  10. $ `ng g p RoleFilter`
-  11. $ `ng g c admin`
+  10. $ `ng g c admin`
+  11. $ `ng g c new-member`
+  12. $ `ng g p RoleFilter`
 
 
 ##### Angular CLI

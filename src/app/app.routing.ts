@@ -4,6 +4,7 @@ import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { RosterComponent } from './roster/roster.component';
 import { ProfileComponent } from './profile/profile.component';
+import { AdminComponent } from './admin/admin.component';
 
 const appRoutes: Routes = [
   {
@@ -21,6 +22,10 @@ const appRoutes: Routes = [
   {
     path:'member/:key',
     component:ProfileComponent
+  },
+  {
+    path:'admin',
+    component: AdminComponent
   }
 ];
 
