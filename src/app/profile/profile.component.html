@@ -1,3 +1,5 @@
-<p>
-  profile works!
-</p>
+<div class="member">
+  <h3 (click)="goToProfile(member)"><a (click)="$event.preventDefault();" href="#">{{(member| async)?.lastName}}, {{(member| async)?.firstName}}</a></h3>
+  <h4>{{(member| async)?.level}} of {{(member| async)?.school}}</h4>
+  <p>Guild Role: {{(member| async)?.role}}</p>
+</div>
