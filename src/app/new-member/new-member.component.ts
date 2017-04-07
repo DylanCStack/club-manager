@@ -15,7 +15,6 @@ export class NewMemberComponent implements OnInit {
   saveMember(newFirst, newLast, newSchool, newLevel, newRole){
 
     if(newFirst && newLast && newSchool && newLevel && newRole){
-      console.log("new-member level")
       this.newMember.emit({
         first:newFirst,
         last: newLast,

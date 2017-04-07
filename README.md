@@ -38,6 +38,7 @@ You will need the following things properly installed on your computer.
   10. $ `ng g c admin`
   11. $ `ng g c new-member`
   12. $ `ng g p RoleFilter`
+    * $ `ng g p remofeDupes` was run first to get the range of roles to search by
 
 
 ##### Angular CLI
