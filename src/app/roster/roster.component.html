@@ -1,12 +1,12 @@
 <div class="filter">
   <select #roleFilter>
     <option value="all">all</option>
-    <option *ngFor="let role of members | async | removeDupes" value="role">{{role}}</option>
+    <option *ngFor="let role of members | async | removeDupes" value={{role}}>{{role}}</option>
   </select>
   <button (click)="filterRoles(roleFilter.value)">Filter</button>
 </div>
 
-<div class="member" *ngFor="let member of members | async">
+<div class="member" *ngFor="let member of members | async | roleFilter:searchRole">
   <h3 (click)="goToProfile(member)"><a (click)="$event.preventDefault();" href="#">{{member.lastName}}, {{member.firstName}}</a></h3>
   <h4>{{member.level}} of {{member.school}}</h4>
   <p>Guild Role: {{member.role}}</p>
