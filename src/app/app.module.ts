@@ -7,17 +7,31 @@ import { routing } from './app.routing';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
+import { RosterComponent } from './roster/roster.component';
+import { AngularFireModule } from 'angularfire2';
+import { masterFirebaseConfig } from './api-keys';
+
+export const firebaseConfig = {
+  apiKey: masterFirebaseConfig.apiKey,
+  authDomain: masterFirebaseConfig.authDomain,
+  databaseURL: masterFirebaseConfig.databaseURL,
+  storageBucket: masterFirebaseConfig.storageBucket
+};
+
+// import firebase config
 
 @NgModule({
   declarations: [
     AppComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    RosterComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
+    AngularFireModule.initializeApp(firebaseConfig),
     routing
   ],
   providers: [],
