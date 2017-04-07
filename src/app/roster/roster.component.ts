@@ -12,12 +12,20 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class RosterComponent implements OnInit {
   members: FirebaseListObservable<any[]>;
   currentRoute: string = this.route.url;
+  selectedMember = null;
 
   constructor(private MemberService: MemberService, private router: Router, private route: Router) { }
 
   ngOnInit() {
     this.members = this.MemberService.getMembers();
-    console.log(this.currentRoute);
+  }
+
+  selectMember(member){
+    this.selectedMember = member;
+  }
+  editMember(member){
+    console.log(member);
+    this.MemberService.updateMember(member);
   }
 
 

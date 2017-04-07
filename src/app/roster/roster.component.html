@@ -3,7 +3,38 @@
   <h4>{{member.level}} of {{member.school}}</h4>
   <p>Guild Role: {{member.role}}</p>
   <div class="adminControls" *ngIf="currentRoute === '/admin'">
-    <button>Edit</button>
+    <button (click)="selectMember(member)">Edit</button>
     <button>Delete</button>
+    <div class="edit" *ngIf="selectedMember">
+      <form *ngIf="selectedMember.$key === member.$key">
+        <div class="form-group">
+          <label>Member's First Name:</label>
+          <input name="selectedMember.firstName"  [(ngModel)]="selectedMember.firstName">
+        </div>
+        <div class="form-group">
+          <label>Member's Last Name:</label>
+          <input name="selectedMember.lastName"  [(ngModel)]="selectedMember.lastName">
+        </div>
+        <div class="form-group">
+          <label>Member's School of Magical Study:</label>
+          <input name="selectedMember.school"  [(ngModel)]="selectedMember.school">
+        </div>
+        <div class="form-group">
+          <label>Member's Level in their Magical School:</label>
+          <select name="selectedMember.level" [(ngModel)]="selectedMember.level">
+            <option value="Novice">Novice</option>
+            <option value="Apprentice">Apprentice</option>
+            <option value="Journeyman">Journeyman</option>
+            <option value="Expert">Expert</option>
+            <option value="Master">Master</option>
+          </select>
+          <div class="form-group">
+            <label>Member's Role in the Guild:</label>
+            <input name="selectedMember.role"  [(ngModel)]="selectedMember.role">
+          </div>
+          <button (click)="editMember(member)">Update</button>
+        </div>
+      </form>
+    </div>
   </div>
 </div>
