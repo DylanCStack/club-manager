@@ -28,6 +28,9 @@ export class RosterComponent implements OnInit {
     this.MemberService.updateMember(member);
   }
 
+  deleteMember(member){
+    this.MemberService.removeMember(member);
+  }
 
   goToProfile(member){
     this.router.navigate(['member', member.$key]);

@@ -25,4 +25,9 @@ export class MemberService {
     entry.update(member);
   }
 
+  removeMember(member){
+    var entry:FirebaseObjectObservable<any> = this.getByKey(member.$key);
+    entry.remove();
+  }
+
 }

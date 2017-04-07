@@ -4,7 +4,7 @@
   <p>Guild Role: {{member.role}}</p>
   <div class="adminControls" *ngIf="currentRoute === '/admin'">
     <button (click)="selectMember(member)">Edit</button>
-    <button>Delete</button>
+    <button (click)="deleteMember(member)">Delete</button>
     <div class="edit" *ngIf="selectedMember">
       <form *ngIf="selectedMember.$key === member.$key">
         <div class="form-group">
