@@ -20,6 +20,10 @@ export class MemberService {
     this.members.push(new Member(e.first, e.last, e.school, e.level, e.role));
   }
 
+  // getAllRoles(){
+  //   return this.angularFire.database.list('members/*/role');
+  // }
+
   updateMember(member){
     var entry:FirebaseObjectObservable<any> = this.getByKey(member.$key);
     entry.update(member);

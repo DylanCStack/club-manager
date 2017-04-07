@@ -11,6 +11,8 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class RosterComponent implements OnInit {
   members: FirebaseListObservable<any[]>;
+  roleFilter:string = "all";
+  // roles: FirebaseListObservable<any[]>;
   currentRoute: string = this.route.url;
   selectedMember = null;
 
@@ -18,6 +20,7 @@ export class RosterComponent implements OnInit {
 
   ngOnInit() {
     this.members = this.MemberService.getMembers();
+    // this.roles = this.MemberService.getAllRoles();
   }
 
   selectMember(member){
